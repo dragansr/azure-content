@@ -18,6 +18,15 @@
 
 [Using the SDK for .NET](app-insights-start-monitoring-app-health-usage.md)
 
+## Version 1.0
+
+- Moved telemetry initializers and telemetry modules from separate sub-namespaces to the root `Microsoft.ApplicationInsights.Extensibility.Web` namespace.
+- Removed "Web" prefix from names of telemetry initializers and telemetry modules because it is already included in the `Microsoft.ApplicationInsights.Extensibility.Web` namespace name.
+- Moved `DeviceContextInitializer` from the `Microsoft.ApplicationInsights` assembly to the `Microsoft.ApplicationInsights.Extensibility.Web` assembly and converted it to an `ITelemetryInitializer`.
+- Change namespace and assembly names from `Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry` to `Microsoft.ApplicationInsights.Extensibility.DependencyCollector` for consistency with the name of the NuGet package.
+- Rename `RemoteDependencyModule` to `DependencyTrackingTelemetryModule`.
+- Rename `CustomPerformanceCounterCollectionRequest` to `PerformanceCounterCollectionRequest`.
+
 ## Version 0.17
 - Removed dependency to EventSource NuGet for the framework 4.5 applications.
 - Anonymous User and Session cookies will not be generated on server side. Telemetry modules ```WebSessionTrackingTelemetryModule``` and ```WebUserTrackingTelemetryModule``` are no longer supported and were removed from ApplicationInsights.config file. Cookies from JavaScript SDK will be respected.
