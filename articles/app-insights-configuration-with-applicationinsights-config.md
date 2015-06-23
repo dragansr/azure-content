@@ -156,7 +156,7 @@ The `Microsoft.ApplicationInsights.PerfCounterCollector` NuGet package adds the 
 ```
 
 The `PerformanceCollectorModule` tracks a number of Windows performance counters. You can see these 
-counters when you open the Filters blade in Metric Explorer.
+counters when you click a chart in Metric Explorer to open its details blade.
 
 You can monitor additional performance counters - both standard Windows counters and any others that you have added.
       
